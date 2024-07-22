@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 700px;
+        margin: auto;
+        padding: 0 60px;
+      }
+      .navbar .heading {
+        color: black;
+        font-weight: 600;
+        font-size: 30px;
+        text-decoration: none;
+        text-align: left;
+        margin-right: 90px;
+      }
+      .navbar .links {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+        margin: 20px;
+      }
+      .navbar .image {
+        height: 100px;
+        width: 90px;
+      }
+      .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        background-color: beige;
+      }
+
+      .section .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        color: wheat;
+        text-align: left;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .image-container {
+        position: relative;
+        max-width: 100%;
+        margin-top: 100px;
+      }
+
+      .overlay-image {
+        width: 100%;
+        height: 400px;
+        display: block;
+      }
+      .section .text-overlay h2 {
+        font-size: 35px;
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+      .section .text-overlay p {
+        font-size: 18px;
+        line-height: 1.9;
+      }
+      .abc {
+        display: flex;
+        justify-content: space-around;
+        background-color: beige;
+      }
+      .image-item {
+        text-align: center;
+        margin: 10px;
+      }
+      .image-item img {
+        max-width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+      .image-item p {
+        margin-top: 10px;
+        font-size: 15px;
+      }
+      .items {
+        text-align: center;
+        margin: 10px;
+      }
+      .items img {
+        max-width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+      .items p {
+        margin-top: 10px;
+        font-size: 15px;
+      }
+      .im {
+        text-align: center;
+        margin: 10px;
+      }
+      .im img {
+        max-width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+      .im p {
+        margin-top: 10px;
+        font-size: 15px;
+      }
+      .image1 {
+        text-align: center;
+        margin: 10px;
+      }
+      .image1 img {
+        max-width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+      .image1 p {
+        margin-top: 10px;
+        font-size: 15px;
+      }
+      .image2 {
+        text-align: center;
+        margin: 10px;
+      }
+      .image2 img {
+        max-width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+      .image2 p {
+        margin-top: 10px;
+        font-size: 15px;
+      }
+      .menu {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(232, 166, 105);
+        position: relative;
+        width: 100%;
+        height: 400px;
+        padding: 20px;
+      }
+      .menu h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        font-style: italic;
+      }
+      .menu-item1 {
+        text-align: center;
+        margin: 10px;
+      }
+      .menu-item1 img {
+        max-width: 300px;
+        height: 250px;
+        display: block;
+        margin: 0 auto;
+      }
+      .menu-item1 .dish-name p {
+        margin-top: 10px;
+        font-size: 50px;
+        font-style: normal;
+      }
+      .menu-item1 .dish-price p {
+        margin-top: 5px;
+        font-size: 20px;
+      }
+      .menu-item1 .add1 {
+        font-size: 20px;
+        background-color: antiquewhite;
+      }
+      .menu-item2 {
+        text-align: center;
+        margin: 10px;
+      }
+      .menu-item2 img {
+        max-width: 300px;
+        height: 250px;
+        display: block;
+        margin: 0 auto;
+      }
+      .menu-item2 .dish-name p {
+        margin-top: 10px;
+        font-size: 50px;
+        font-style: normal;
+      }
+      .menu-item2 .dish-price p {
+        margin-top: 5px;
+        font-size: 20px;
+      }
+      .menu-item2 .add2 {
+        font-size: 20px;
+        background-color: antiquewhite;
+      }
+      .menu-item3 {
+        text-align: center;
+        margin: 10px;
+      }
+      .menu-item3 img {
+        max-width: 300px;
+        height: 250px;
+        display: block;
+        margin: 0 auto;
+      }
+      .menu-item3 .dish-name p {
+        margin-top: 10px;
+        font-size: 50px;
+        font-style: normal;
+      }
+      .menu-item3 .dish-price p {
+        margin-top: 5px;
+        font-size: 20px;
+      }
+      .menu-item3 .add3 {
+        font-size: 20px;
+        background-color: antiquewhite;
+      }
+      .pic {
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+      }
+      .pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      footer {
+        height: 250px;
+        background-color: beige;
+        color: black;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: center;
+      }
+      ul1 {
+        padding: 50px;
+        text-align: center;
+        line-height: 2;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      li {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <img
+          class="image"
+          src="https://marketplace.canva.com/EAFLU7Mm3FI/1/0/1600w/canva-brown-and-beige-simple-minimalist-coffee-shop-circle-logo-ww1u6OsW_3o.jpg"
+          alt="image"
+        />
+        <h1 class="heading">FROTH AND FLAVOR</h1>
+        <ul class="links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="order.html">Orders</a></li>
+          <li><a href="home.html">Pay</a></li>
+          <li><a href="menu.html">Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <br />
+  <br />
+  <br />
+  <body>
+    <section class="section">
+      <div class="image-container">
+        <img
+          class="overlay-image"
+          src="https://media.istockphoto.com/id/1406126133/photo/latte-art-on-hot-latte-coffee-aroma-coffee-cup-and-coffee-beans-on-wooden-desk.jpg?s=612x612&w=0&k=20&c=sTuZJFCCqej4g7k45NTy_qoBXBeAccrPfKOVoQtAMf4="
+          alt="image"
+        />
+        <div class="text-overlay">
+          <p>Awaken your senses with a steaming cup of liquid motivation.</p>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <div class="menu">
+      <h1>MENU</h1>
+      <div class="menu-item1">
+        <img
+          src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2022-07-Cappuccino%2FCappuccino"
+          alt="image"
+        />
+        <p class="dish-name">Capuccino</p>
+        <p class="dish-price">$285</p>
+        <div class="add1">
+          <p>Add to Cart</p>
+        </div>
+      </div>
+      <div class="menu-item2">
+        <img
+          src="https://www.philips.com/c-dam/b2c/master/experience/ho/philips-chef/recipe/drinks-and-ice-creams/iced-americano/iced-americano-main-thumb.jpg"
+          alt="image"
+        />
+        <p class="dish-name">Iced Americano</p>
+        <p class="dish-price">$350</p>
+        <div class="add2">
+          <p>Add to Cart</p>
+        </div>
+      </div>
+      <div class="menu-item3">
+        <img
+          src="https://funcakes.com/content/uploads/2019/11/FunCakes-recept-delicious-donuts-website-1-960x720-c-default.jpg"
+          alt="image"
+        />
+        <p class="dish-name">Donuts</p>
+        <p class="dish-price">$380</p>
+        <div class="add3">
+          <p>Add to Cart</p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
+  <footer>
+    <ul1>
+      <li>Product</li>
+      <li>Revies</li>
+      <li>Pricing</li>
+      <li>Our Company</li>
+    </ul1>
+    <ul1>
+      <li>Diversity</li>
+      <li>Community</li>
+      <li>Coffeehouse</li>
+      <li>Contact Us</li>
+    </ul1>
+    <ul1>
+      <li>Privacy policy</li>
+      <li>Customer Service</li>
+      <li>Delivery</li>
+      <li>Learn More</li>
+    </ul1>
+  </footer>
+</html>
